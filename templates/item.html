@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {% include "header.html" %}
+<head>
+ <link type=text/css rel=stylesheet href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+<div class="item">
+  <h2 style="color:rgb(10, 155, 135)" class="inline">{{item.name}}</h2>
+  &nbsp
+  <h3 style="color:black" class="inline">- {{category.name}}</a></h3>
+  <h3 style="color:rgb(0, 9, 94)"class="description">{{item.description}}</h3>
+  </br>
+  <a href = "{{url_for('editItem', category_id=category.id, item_id=item.id)}}" style="color:rgb(10, 155, 135)";"text-decoration:underline">Edit</a>
+  &nbsp|&nbsp
+  <a href = "{{url_for('deletePlayer', category_id=category.id, item_id=item.id)}}" style="color:rgb(10, 155, 135)";"text-decoration:underline">Delete</a>
+</div>
+</body>
+</html>

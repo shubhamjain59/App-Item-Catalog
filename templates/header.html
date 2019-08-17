@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type=text/css rel=stylesheet href="{{url_for('static', filename='styles.css')}}">
+  </head>
+    <header>
+      <h2 class="inline"><a href = "{{url_for('showCatalog')}}" 
+      style="color:rgb(197, 191, 191)";"font-weight:bold">Item Catalog App</a></h2>
+    <div class="inline login">
+      {% if 'username' not in session %}
+      <a class="login-button" href="{{url_for('showLogin')}}">Login </a>
+      {% else %}
+      <a class="logout-button" href="{{url_for('disconnect')}}">Logout </a>
+      {% endif %}
+    </div>
+    </header>
+  <body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flash">
+      {% for message in messages %}
+      <h2><strong>{{message}}</strong></h2>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+  </body>
+</html>

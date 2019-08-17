@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% include "header.html" %}
+<head>
+    <link type=text/css rel=stylesheet href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body class="item">
+<form action="{{url_for('editItem' ,category_id=category_id, item_id=item_id, item=editedItem)}}"
+  method="POST">
+  <fieldset>
+  <legend>Edit Item</legend>
+  Name:<br>
+  <input type="text" size="30" name="name" placeholder = '{{item.name}}' required><br>
+  Description:<br>
+  <input type="text" size="30" name="description" placeholder = '{{item.description}}' required><br>
+  Category:<br>
+  <select name="category_id" required>
+    <option value="" >--Select--</option>
+    <option value=1 >Transportation</option>
+    <option value=2 >Household</option>
+  </select>
+  </br></br>
+  <input type="submit" value ="Update"><br><br>
+  <input type="reset" value="Reset">
+  <a href = "{{url_for('showCatalog')}}"><input type="button" value="Cancel"></a>
+  </br></br>
+  </fieldset>
+</form>
+</body>
+</html>

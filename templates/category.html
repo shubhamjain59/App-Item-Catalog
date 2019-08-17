@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% include "header.html" %}
+<head>
+    <link type=text/css rel=stylesheet href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+<nav>
+  <h3 style="color:rgb(0, 9, 94)">Teams</h3>
+  <ul>
+    {% for i in totalcategory %}
+    <li>
+      <a href = "{{url_for('showCategory', category_id = i.id)}}" style="color:rgb(10, 155, 135)">{{i.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+<article>
+  <h3 style="color:rgb(0, 9, 94)">{{category.name}}</h3>
+  <ul>
+    {% for i in item %}
+    <li>
+      <a href = "{{url_for('showItem', category_id=category.id ,item_id=i.id)}}" style="color:rgb(10, 155, 135)">{{i.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  </br>
+</article>
+</body>
+</html>

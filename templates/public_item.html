@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{% include "header.html" %}
+  <head>
+    <link type=text/css rel=stylesheet href="{{url_for('static', filename='styles.css')}}">
+  </head>
+  <body>
+<div class="item">
+  <h2 style="color:rgb(10, 155, 135)" class="inline">{{item.name}}</h2>
+  &nbsp
+  <h3 style="color:black" class="inline">- {{category.name}}</a></h3>
+  <h3 style="color:rgb(0, 9, 94)"class="description">{{item.description}}</h3>
+</div>
+</body>
+</html>
