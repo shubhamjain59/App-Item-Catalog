@@ -22,7 +22,8 @@ CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Category Item Catalog"
 
-engine = create_engine('sqlite:///appitemcatalog.db', connect_args={'check_same_thread': False})
+engine = create_engine('sqlite:///appitemcatalog.db',
+                       connect_args={'check_same_thread': False})
 Base.metadata.bind = engine
 
 # Creating anti-forgery state token
@@ -63,7 +64,6 @@ def gconnect():
         response = make_response(json.dumps(result.get('error')), 500)
         response.headers['Content-Type'] = 'application/json'
         return response
-
 
     # Verify that the access token is used for the intended user.
     g_id = credentials.id_token['sub']
@@ -245,9 +245,9 @@ def newItem():
     session = DBSession()
     if request.method == 'POST':
         newItem = Items(name=request.form['name'],
-                             description=request.form['description'],
-                             category_id=request.form['category_id'],
-                             user_id=login_session['user_id'])
+                        description=request.form['description'],
+                        category_id=request.form['category_id'],
+                        user_id=login_session['user_id'])
         session.add(newItem)
         session.commit()
         flash("New Item Added!")

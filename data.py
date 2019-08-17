@@ -25,30 +25,30 @@ session.commit()
 
 # Adding items into Category
 item = Items(user_id=1, name="Tires",
-                 description="Tires made of Rubber"
-                 "They are the main parts in vehicles.",
-                 Category=category_one)
+             description="Tires made of Rubber"
+             "They are the main parts in vehicles.",
+             Category=category_one)
 session.add(item)
 session.commit()
 
 item = Items(user_id=1, name="Oil",
-                 description="Oils provides lubrication to the engines "
-                 "Oil is most essential item in todays vehicle industries. ",
-                 Category=category_one)
+             description="Oils provides lubrication to the engines "
+             "Oil is most essential item in todays vehicle industries. ",
+             Category=category_one)
 session.add(item)
 session.commit()
 
 item = Items(user_id=1, name="Washing Machine",
-                 description="The machine that washes our clothes"
-                 "without human efforts. ",
-                 Category=category_two)
+             description="The machine that washes our clothes"
+             "without human efforts. ",
+             Category=category_two)
 session.add(item)
 session.commit()
 
 item = Items(user_id=1, name="Microwave",
-                 description="Microwave helps us to prepare food easily & "
-                 "fast. It is the important items in todays kitchen",
-                 Category=category_two)
+             description="Microwave helps us to prepare food easily & "
+             "fast. It is the important items in todays kitchen",
+             Category=category_two)
 session.add(item)
 session.commit()
 
