@@ -1,0 +1,154 @@
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+header {
+	background-color: rgb(94, 63, 17);
+	padding: 20px;
+}
+
+nav {
+	float: left;
+	padding-left: 200px;
+	padding-top: 20px;
+}
+
+article {
+	padding-left: 600px;
+	padding-top: 20px;
+	min-height: 428px;
+}
+
+body {
+	font-size: 25px;
+	margin: 0px;
+}
+
+.flash {
+	text-align: center;
+	color: rgb(14, 17, 230);
+}
+
+.inline {
+	display: inline;
+}
+
+.item {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.description {
+	max-width: 80%;
+	padding-left: 10%;
+}
+
+.login-button {
+	background-color: rgb(76, 150, 6);
+	color: white;
+	border-radius: 20px;
+	padding: 5px 20px;
+	display: inline-block;
+	font-size: 20px;
+	margin: 5px 5px;
+}
+
+.logout-button {
+	background-color: rgb(76, 150, 6);
+	color: white;
+	border-radius: 20px;
+	padding: 5px 20px;
+	display: inline-block;
+	font-size: 20px;
+	margin: 5px 5px;
+}
+
+.login-button:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+}
+
+.logout-button:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+}
+
+.login {
+	float: right;
+}
+
+.loginpage {
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+}
+  
+li a:hover {
+	background-color: rgb(0, 9, 94);
+}
+
+fieldset { 
+	display: block;
+	margin-left: 500px;
+	margin-right: 500px;
+	padding-top: 20px;
+}
+
+legend {
+	color:rgb(10, 155, 135);
+	padding-top: 10px;
+}
+
+select {
+	width: 80%;
+	padding: 5px;
+}
+
+input[type=text] {
+	width: 80%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+input[type=submit]{
+	width: 80%;
+	background-color: rgb(10, 155, 135);
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+}
+  
+input[type=submit]:hover {
+	background-color: rgb(0, 9, 94);
+}
+
+input[type=button],input[type=reset] {
+	width: 40%;
+	background-color: rgb(0, 9, 94);
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+}
+
+input[type=submit].delete,input[type=button].delete{
+	width:6%
+}
+
+textarea {
+	width: 80%;
+	height: 80px;
+	font-size: 16px;
+	resize: none;
+}
+  
+
